@@ -63,6 +63,12 @@
 
         // attach an event listener to the Clear button here
 
+        $('input[value="Clear"]').click( function(){
+          console.log('Caught a button click event.');
+          $("#output_area").removeClass('selected');
+          $("#output_area").html('<p>Click the Run Script button</p>');
+        });
+
       }); // end of $(document).ready
 
       /*
@@ -116,7 +122,7 @@
  
     <h2>Output area:</h2>
     <div id="output_area" class="idle">
-      <p>This is the area where the output goes. This content appears before the script is run.</p>
+    <p>This is the area where the output goes. This content appears before the script is run.</p>
     </div>
   </body>
 </html>
